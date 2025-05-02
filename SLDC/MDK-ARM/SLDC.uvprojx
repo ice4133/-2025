@@ -10,6 +10,7 @@
       <TargetName>SLDC</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -137,7 +138,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2V8M.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -527,9 +528,28 @@
         </Group>
         <Group>
           <GroupName>Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>drv_tim.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\Driver\drv_tim.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>drv_uart.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\Driver\drv_uart.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Device</GroupName>
+          <Files>
+            <File>
+              <FileName>dvc_gmrmotor.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\Device\dvc_gmrmotor.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Algorithm</GroupName>
@@ -542,9 +562,23 @@
         </Group>
         <Group>
           <GroupName>Chariot</GroupName>
+          <Files>
+            <File>
+              <FileName>crt_chassis.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\Chariot\crt_chassis.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Task</GroupName>
+          <Files>
+            <File>
+              <FileName>tsk_config_and_callback.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>..\User\Task\tsk_config_and_callback.cpp</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>::CMSIS</GroupName>
