@@ -29,18 +29,18 @@ void UART_Init(UART_HandleTypeDef *huart, UART_Call_Back Callback_Function, uint
 	}
 }
 
-/**
- * @brief 发送数据帧
- *
- * @param huart UART编号
- * @param Data 被发送的数据指针
- * @param Length 长度
- * @return uint8_t 执行状态
- */
-uint8_t UART_Send_Data(UART_HandleTypeDef *huart, uint8_t *Data, uint16_t Length)
-{
-    return (HAL_UART_Transmit_DMA(huart, Data, Length));
-}
+///**
+// * @brief 发送数据帧
+// *
+// * @param huart UART编号
+// * @param Data 被发送的数据指针
+// * @param Length 长度
+// * @return uint8_t 执行状态
+// */
+//uint8_t UART_Send_Data(UART_HandleTypeDef *huart, uint8_t *Data, uint16_t Length)
+//{
+//    return (HAL_UART_Transmit_DMA(huart, Data, Length));
+//}
 
 
 /** 
@@ -60,4 +60,14 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
 	}
 }
 
+/** 
+* @brief 统一发送PWM波数据，gmr就存储数据吧
+* 
+*
+*/
 
+
+void PWM_PeriodElapsedCallBack()
+{
+	
+}

@@ -35,3 +35,4 @@ sldc\main.o: ../Core/Inc/dma.h
 sldc\main.o: ../Core/Inc/tim.h
 sldc\main.o: ../Core/Inc/usart.h
 sldc\main.o: ../Core/Inc/gpio.h
+sldc\main.o: ..\User\Task\tsk_config_and_callback.h

@@ -14,9 +14,22 @@
 
 /* Include ------------------------*/
 #include "dvc_gmrmotor.h"
+#include "drv_uart.h"
 
 
 
+/* 雷达数据包结构体 */
+
+
+/*  RDK数据包结构体 */
+
+
+/* 底盘控制模式 */
+//enum Enum_Chassis_Control : uint8_t
+//{
+//    Chassis_Control_Dead = 0, //死逻辑
+//    Chassis_Control_Radar,//雷达模式
+//};
 /** 
  *
  * @brief 麦轮底盘类
@@ -68,13 +81,14 @@ public:
     inline void Set_Now_Omega(float __Now_Omega);
 
 
-		
+		void UART_RxCpltCallback(uint8_t *Rx_Data, uint16_t Size);//串口接收雷达数据函数
 		void TIM_Calculate_PeriodElapsedCallback();
+		//Enum_Chassis_Control chassis_type;
 protected:
 
     //初始化相关常量
 
-
+    Struct_UART_Manage_Object *UART_Radar_Manage_Object;//接收缓冲数据包，专门接收雷达数据
 		//读写变量
     //速度X限制
     float Velocity_X_Max;
@@ -98,6 +112,7 @@ protected:
     float Now_Omega;
 		
 		void Speed_Resolution();//速度解算函数
+
 };
 
 

@@ -14,11 +14,15 @@
 //#include "usart.h"
 #include "drv_uart.h"
 //#include "tim.h"
+#include "dvc_gmrmotor.h"
+#include "crt_chassis.h"
 
-
-
-
-
+/* 变量 --------------*/
+uint32_t pwm_slow_down;
+bool pwm_flag=0;
+bool encoder_flag=0;
+int encoder_t;
+Class_Mecanum_Chassis chassis;//定义底盘
 /**
  * @brief 雷达回传给底盘的数据
  *
@@ -29,18 +33,46 @@
 
 void Radar_UART6_Callback(uint8_t *Buffer, uint16_t Length)
 {
-    //todo 写把雷达数据传给底盘
+	//todo 写把雷达数据传给底盘，底盘进行解算，解算完的数据传给电机模块
+	chassis.UART_RxCpltCallback(Buffer,Length);//得到target数据
 }
 
 
 /**
-* @brief 定时器中断循环任务
+* @brief 定时器中断循环任务，循环获取编码器数值
 *
 *
 */
-void Task500us_TIM3_Callback()
+void Task250ms_TIM5_Callback()
 {
-	//todo 进行循环任务
+	
+	int i=0;
+	for(i=0;i<4;i++)
+	{
+		chassis.Motor_Wheel[i].Data_Process();//得到编码器数据，now
+	}
+
+}
+/**
+* @brief 定时器中断循环任务,循环处理数据，发送数据
+*
+*
+*/
+void Task500ms_TIM3_Callback()
+{
+	//todo 进行循环任务，统一把电机模块的缓冲数据发送给电机
+	if(++pwm_slow_down<1000)
+	{
+		return;
+	}
+	pwm_slow_down=0;
+	pwm_flag=1;
+	
+	if(pwm_flag)
+	{
+		chassis.TIM_Calculate_PeriodElapsedCallback();//统一处理数据，处理now和target数据
+		PWM_PeriodElapsedCallBack();//统一发送PWM数据，500ms周期
+	}
 }
 extern "C" void Task_Init()
 {
@@ -48,8 +80,8 @@ extern "C" void Task_Init()
 	//串口初始化
 			UART_Init(&huart1, Radar_UART6_Callback, 128);	
 	    // 定时器循环任务
-    TIM_Init(&htim3, Task500us_TIM3_Callback);
-    //TIM_Init(&htim5, Task1ms_TIM5_Callback);先配置一个定时器，预留一个定时器
+    TIM_Init(&htim3, Task500ms_TIM3_Callback);
+    TIM_Init(&htim5, Task250ms_TIM5_Callback);//先配置一个定时器，预留一个定时器
 	
 	
 				/* 定时器初始化 */

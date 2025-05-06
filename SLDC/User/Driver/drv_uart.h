@@ -69,10 +69,10 @@ extern struct Struct_UART_Manage_Object UART1_Manage_Object;
 
 void UART_Init(UART_HandleTypeDef *huart, UART_Call_Back Callback_Function, uint16_t Rx_Buffer_Length);
 
-uint8_t UART_Send_Data(UART_HandleTypeDef *huart, uint8_t *Data, uint16_t Length);
+//uint8_t UART_Send_Data(UART_HandleTypeDef *huart, uint8_t *Data, uint16_t Length);
 
-void TIM_UART_PeriodElapsedCallback();
-
+//void TIM_UART_PeriodElapsedCallback();
+		void PWM_PeriodElapsedCallBack();
 #ifdef __cplusplus
 }
 #endif

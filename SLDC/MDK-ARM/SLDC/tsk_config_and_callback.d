@@ -35,3 +35,6 @@ sldc\tsk_config_and_callback.o: ..\User\Task\tsk_config_and_callback.h
 sldc\tsk_config_and_callback.o: ..\User\Driver\drv_uart.h
 sldc\tsk_config_and_callback.o: ../Core/Inc/usart.h
 sldc\tsk_config_and_callback.o: ../Core/Inc/main.h
+sldc\tsk_config_and_callback.o: ..\User\Device\dvc_gmrmotor.h
+sldc\tsk_config_and_callback.o: ..\User\Algorithm\alg_pid.h
+sldc\tsk_config_and_callback.o: ..\User\Chariot\crt_chassis.h
