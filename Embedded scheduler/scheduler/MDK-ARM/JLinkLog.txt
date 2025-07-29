@@ -1,0 +1,146 @@
+T65A4 000:183.301   SEGGER J-Link V7.98c Log File
+T65A4 000:183.726   DLL Compiled: Aug  7 2024 15:37:06
+T65A4 000:183.751   Logging started @ 2025-06-10 14:05
+T65A4 000:183.773   Process: E:\Keil5\new_comprehensive_keil5\32\UV4\UV4.exe
+T65A4 000:183.804 - 183.797ms
+T65A4 000:183.838 JLINK_SetWarnOutHandler(...)
+T65A4 000:183.860 - 0.023ms
+T65A4 000:183.887 JLINK_OpenEx(...)
+T65A4 000:186.275   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T65A4 000:187.006   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T65A4 000:187.192   Decompressing FW timestamp took 97 us
+T65A4 000:193.006   Hardware: V9.70
+T65A4 000:193.080   S/N: 602712128
+T65A4 000:193.115   OEM: SEGGER
+T65A4 000:193.149   Feature(s): GDB, RDI, FlashBP, FlashDL, JFlash
+T65A4 000:193.952   Bootloader: (Could not read)
+T65A4 000:195.099   TELNET listener socket opened on port 19021
+T65A4 000:195.384   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T65A4 000:195.541   WEBSRV Webserver running on local port 19080
+T65A4 000:195.978   Looking for J-Link GUI Server exe at: E:\Keil5\new_comprehensive_keil5\32\ARM\Segger\JLinkGUIServer.exe
+T65A4 000:196.259   Looking for J-Link GUI Server exe at: E:\Keil5\stm32\jlink\JLinkGUIServer.exe
+T65A4 000:196.393   Forking J-Link GUI Server: E:\Keil5\stm32\jlink\JLinkGUIServer.exe
+T65A4 000:291.141   J-Link GUI Server info: "J-Link GUI server V7.22b "
+T65A4 000:291.508   J-Link GUI Server: Connection breakdown.
+T65A4 000:291.642 - 107.749ms returns "O.K."
+T65A4 000:291.679 JLINK_GetEmuCaps()
+T65A4 000:291.709 - 0.027ms returns 0xB9FF7BBF
+T65A4 000:291.738 JLINK_TIF_GetAvailable(...)
+T65A4 000:291.936 - 0.198ms
+T65A4 000:291.965 JLINK_SetErrorOutHandler(...)
+T65A4 000:291.989 - 0.024ms
+T65A4 000:292.029 JLINK_ExecCommand("ProjectFile = "C:\Users\ice\Desktop\SLDC__\-2025\Embedded scheduler\scheduler\MDK-ARM\JLinkSettings.ini"", ...). 
+T65A4 000:305.936 - 13.907ms returns 0x00
+T65A4 000:305.995 JLINK_ExecCommand("Device = STM32F407VETx", ...). 
+T65A4 000:306.350   Device "STM32F407VE" selected.
+T65A4 000:306.877 - 0.853ms returns 0x00
+T65A4 000:306.933 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T65A4 000:306.960   ERROR: Unknown command
+T65A4 000:307.011 - 0.053ms returns 0x01
+T65A4 000:307.038 JLINK_GetHardwareVersion()
+T65A4 000:307.065 - 0.024ms returns 97000
+T65A4 000:307.091 JLINK_GetDLLVersion()
+T65A4 000:307.114 - 0.022ms returns 79803
+T65A4 000:307.138 JLINK_GetOEMString(...)
+T65A4 000:307.162 JLINK_GetFirmwareString(...)
+T65A4 000:307.183 - 0.021ms
+T65A4 000:307.208 JLINK_GetDLLVersion()
+T65A4 000:307.232 - 0.023ms returns 79803
+T65A4 000:307.255 JLINK_GetCompileDateTime()
+T65A4 000:307.276 - 0.022ms
+T65A4 000:307.301 JLINK_GetFirmwareString(...)
+T65A4 000:307.322 - 0.021ms
+T65A4 000:307.345 JLINK_GetHardwareVersion()
+T65A4 000:307.366 - 0.021ms returns 97000
+T65A4 000:307.388 JLINK_GetSN()
+T65A4 000:307.410 - 0.021ms returns 602712128
+T65A4 000:307.432 JLINK_GetOEMString(...)
+T65A4 000:307.457 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T65A4 000:308.186 - 0.728ms returns 0x00
+T65A4 000:308.223 JLINK_HasError()
+T65A4 000:308.256 JLINK_SetSpeed(5000)
+T65A4 000:308.417 - 0.162ms
+T65A4 000:308.944 JLINK_HasError()
+T65A4 000:308.989 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T65A4 000:309.021 - 0.031ms returns JLINKARM_RESET_TYPE_NORMAL
+T65A4 000:309.044 JLINK_Reset()
+T65A4 000:309.298   InitTarget() start
+T65A4 000:309.339    J-Link Script File: Executing InitTarget()
+T65A4 000:309.483   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 000:310.580   DAP initialized successfully.
+T65A4 000:812.678   Timeout while waiting for CPU to halt.
+T65A4 000:812.758   Can not attach to CPU. Trying connect under reset.
+T65A4 000:863.910   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 000:865.259   DAP initialized successfully.
+T65A4 001:418.885   Timeout while waiting for CPU to halt.
+T65A4 001:418.955   Connecting to CPU via connect under reset failed.
+T65A4 001:470.140   InitTarget() end - Took 1.16s
+T65A4 001:470.215   Connect failed. Resetting via Reset pin and trying again.
+T65A4 001:532.512   InitTarget() start
+T65A4 001:532.596    J-Link Script File: Executing InitTarget()
+T65A4 001:532.851   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 001:534.686   DAP initialized successfully.
+T65A4 002:036.993   Timeout while waiting for CPU to halt.
+T65A4 002:037.070   Can not attach to CPU. Trying connect under reset.
+T65A4 002:088.060   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 002:090.081   DAP initialized successfully.
+T65A4 002:643.722   Timeout while waiting for CPU to halt.
+T65A4 002:643.804   Connecting to CPU via connect under reset failed.
+T65A4 002:694.723   InitTarget() end - Took 1.16s
+T65A4 002:694.799 - 2385.754ms
+T65A4 002:694.829 JLINK_GetId()
+T65A4 002:695.005   InitTarget() start
+T65A4 002:695.053    J-Link Script File: Executing InitTarget()
+T65A4 002:695.211   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 002:696.368   DAP initialized successfully.
+T65A4 003:198.512   Timeout while waiting for CPU to halt.
+T65A4 003:198.589   Can not attach to CPU. Trying connect under reset.
+T65A4 003:249.722   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 003:250.884   DAP initialized successfully.
+T65A4 003:803.596   Timeout while waiting for CPU to halt.
+T65A4 003:803.680   Connecting to CPU via connect under reset failed.
+T65A4 003:854.579   InitTarget() end - Took 1.15s
+T65A4 003:854.650   Connect failed. Resetting via Reset pin and trying again.
+T65A4 003:916.200   InitTarget() start
+T65A4 003:916.286    J-Link Script File: Executing InitTarget()
+T65A4 003:916.434   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 003:917.528   DAP initialized successfully.
+T65A4 004:419.663   Timeout while waiting for CPU to halt.
+T65A4 004:419.738   Can not attach to CPU. Trying connect under reset.
+T65A4 004:470.397   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 004:471.954   DAP initialized successfully.
+T65A4 005:027.670   Timeout while waiting for CPU to halt.
+T65A4 005:027.749   Connecting to CPU via connect under reset failed.
+T65A4 005:079.233   InitTarget() end - Took 1.16s
+T65A4 005:079.305 - 2384.475ms returns 0x00000000
+T65A4 005:079.341 JLINK_GetId()
+T65A4 005:079.556   InitTarget() start
+T65A4 005:079.606    J-Link Script File: Executing InitTarget()
+T65A4 005:079.895   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 005:081.129   DAP initialized successfully.
+T65A4 005:582.602   Timeout while waiting for CPU to halt.
+T65A4 005:582.674   Can not attach to CPU. Trying connect under reset.
+T65A4 005:633.473   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 005:634.958   DAP initialized successfully.
+T65A4 006:189.893   Timeout while waiting for CPU to halt.
+T65A4 006:190.022   Connecting to CPU via connect under reset failed.
+T65A4 006:242.359   InitTarget() end - Took 1.16s
+T65A4 006:242.429   Connect failed. Resetting via Reset pin and trying again.
+T65A4 006:302.890   InitTarget() start
+T65A4 006:302.970    J-Link Script File: Executing InitTarget()
+T65A4 006:303.158   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 006:304.470   DAP initialized successfully.
+T65A4 006:807.469   Timeout while waiting for CPU to halt.
+T65A4 006:807.555   Can not attach to CPU. Trying connect under reset.
+T65A4 006:858.572   SWD selected. Executing JTAG -> SWD switching sequence.
+T65A4 006:859.958   DAP initialized successfully.
+T65A4 007:413.877   Timeout while waiting for CPU to halt.
+T65A4 007:413.941   Connecting to CPU via connect under reset failed.
+T65A4 007:465.605   InitTarget() end - Took 1.16s
+T65A4 007:465.667 - 2386.324ms returns 0x00000000
+T65A4 007:468.413 JLINK_GetFirmwareString(...)
+T65A4 007:468.457 - 0.043ms
+T65A4 010:849.501 JLINK_Close()
+T65A4 010:860.864 - 11.362ms
+T65A4 010:860.949   
+T65A4 010:860.978   Closed
